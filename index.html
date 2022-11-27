@@ -11,6 +11,13 @@
         li{
             margin: 10px;
         }
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto;
+            
+            
+        }
+        
     </style>
     
 </head>
@@ -49,6 +56,85 @@
         </button>
                 
     </nav>
+    <div style="height: 156px;"></div>
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+    </div>
+    
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/banner1.jpg" alt="" class="d-block" style="width: 100vw;">
+      </div>
+      <div class="carousel-item">
+        <img src="img/banner2.jpg" alt="" class="d-block" style="width: 100vw;">
+      </div>
+      <div class="carousel-item">
+        <img src="img/banner3.jpg" alt="" class="d-block" style="width: 100vw;">
+      </div>
+      <div class="carousel-item">
+        <img src="img/banner4.jpg" alt="" class="d-block" style="width: 100vw;">
+      </div>
+      <div class="carousel-item">
+        <img src="img/banner5.jpg" alt="" class="d-block" style="width: 100vw;">
+      </div>
+    </div>
+    
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-9">
+            <div class="text-center p-5">
+                <h3>Articles</h3>
+                <br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias velit maxime nam iste! Sit ut quam dolorum? Aperiam libero quos minus nisi id voluptatibus. Sit rerum ducimus recusandae enim quis?</p>
+            </div>
+            <div class="grid-container">
+                <div class="item1" style="margin: auto;">
+                    <div class="card" style="width: 30vw;">
+                        <img class="card-img-top" src="img/a1.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                        <h4 class="card-title">Article headline</h4>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-primary">View more</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item2" style="margin: auto;">
+                    <div class="card" style="width: 30vw;">
+                        <img class="card-img-top" src="img/a2.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                        <h4 class="card-title">Article headline</h4>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-primary">View more</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            
+        </div>
+        <div class="col-sm-3"></div>
+      </div>
 
     <script>
         if (window.innerWidth<=576){        
@@ -56,7 +142,8 @@
             let li = document.createElement("li");
             let a = document.createElement("a");
             let div = document.getElementsByTagName("div");
-
+            
+            div[4].style.cssText="height: 96px;";
             li.className="nav-item";
             a.className="nav-link text-white";
             a.textContent="Login";

@@ -97,7 +97,7 @@
     </button>
     </div>
 
-    <div class="row">
+    <div class="row" style="margin: 0px;">
         <div class="col-sm-9">
             <div class="text-center p-5">
                 <h3>Articles</h3>
@@ -130,10 +130,19 @@
                     </div>
                 </div>
             </div>
-                
+        
+        </div>
+        <div class="col-sm-3">
+            <div class="text-center p-5">
+                <h3>BMI Indicator</h3><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam totam laudantium dignissimos ipsam, repellat eius recusandae, sapiente quidem asperiores in nemo, a modi culpa blanditiis odit quos quae? Harum, laudantium!</p>
+                <input type="text" id="height" name="height" placeholder="height" style="width: 100%;"><br><br>
+                <input type="text" id="weight" name="weight" placeholder="weight" style="width: 100%;"><br><br>
+                <button type="button" onclick="calcBMI()" class="btn btn-dark">Result</button><br>
+                <p id="bmi"></p>
+            </div>
             
         </div>
-        <div class="col-sm-3"></div>
       </div>
 
     <script>

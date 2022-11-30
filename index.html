@@ -20,14 +20,14 @@
             color: white;
         }
         
-        /*@media (max-width: 767px) {
-		.carousel-inner .carousel-item > div {
+        @media (max-width: 767px) {
+		.multi.carousel-inner .carousel-item > div {
 			display: none;
 		}
-		.carousel-inner .carousel-item > div:first-child {
+		.multi.carousel-inner .carousel-item > div:first-child {
 			display: block;
 		}
-        }*/
+        }
 
         .multi.carousel-inner .carousel-item.active,
         .multi.carousel-inner .carousel-item-next,
@@ -166,7 +166,7 @@
                 </div>
             </div>
             <div class="text-center p-5">
-                <a href="#">Read more</a>
+                <a href="#" class="text-black">Read more</a>
             </div>
         
         </div>
@@ -174,10 +174,10 @@
             <div class="text-center p-5">
                 <h3>BMI Indicator</h3><br>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam totam laudantium dignissimos ipsam, repellat eius recusandae, sapiente quidem asperiores in nemo, a modi culpa blanditiis odit quos quae? Harum, laudantium!</p>
-                <input type="text" id="height" name="height" placeholder="height" style="width: 100%;"><br><br>
-                <input type="text" id="weight" name="weight" placeholder="weight" style="width: 100%;"><br><br>
+                <input type="text" id="height" name="height" placeholder="height(cm)" style="width: 100%;"><br><br>
+                <input type="text" id="weight" name="weight" placeholder="weight(kg)" style="width: 100%;"><br><br>
                 <button type="button" onclick="calcBMI()" class="btn btn-dark">Result</button><br>
-                <p id="bmi"></p>
+                <p id="bmi" class="p-3" style="font-weight: bold;height: 30px;"></p>
             </div>
             
         </div>
@@ -194,9 +194,14 @@
 					<div class="carousel-item active multi-item">
 						<div class="col-md-3">
 							<div class="card">
-								<div class="card-img">
+								<div class="card-img-top">
 									<img src="/img/g3.jpg" class="img-fluid">
 								</div>
+                                <div class="card-body text-center">
+                                    <h6 class="card-title">Gift A</h6>
+                                    <p class="card-text">50 points</p>
+                                </div>
+
 								
 							</div>
 						</div>
@@ -204,9 +209,13 @@
 					<div class="carousel-item multi-item">
 						<div class="col-md-3">
 							<div class="card">
-								<div class="card-img">
+								<div class="card-img-top">
 									<img src="/img/g4.jpg" class="img-fluid">
 								</div>
+                                <div class="card-body text-center">
+                                    <h6 class="card-title">Gift B</h6>
+                                    <p class="card-text">100 points</p>
+                                </div>
 								
 							</div>
 						</div>
@@ -214,40 +223,52 @@
 					<div class="carousel-item multi-item">
 						<div class="col-md-3">
 							<div class="card">
-								<div class="card-img">
+								<div class="card-img-top">
 									<img src="img/g5.jpg" class="img-fluid">
 								</div>
-								
+								<div class="card-body text-center">
+                                    <h6 class="card-title">Gift C</h6>
+                                    <p class="card-text">100 points</p>
+                                </div>
 							</div>
 						</div>
 					</div>
 					<div class="carousel-item multi-item">
 						<div class="col-md-3">
 							<div class="card">
-								<div class="card-img">
+								<div class="card-img-top">
 									<img src="/img/g6.jpg" class="img-fluid">
 								</div>
-								
+								<div class="card-body text-center">
+                                    <h6 class="card-title">Gift D</h6>
+                                    <p class="card-text">250 points</p>
+                                </div>
 							</div>
 						</div>
 					</div>
 					<div class="carousel-item multi-item">
 						<div class="col-md-3">
 							<div class="card">
-								<div class="card-img">
+								<div class="card-img-top">
 									<img src="/img/g7.jpg" class="img-fluid">
 								</div>
-								
+								<div class="card-body text-center">
+                                    <h6 class="card-title">Gift E</h6>
+                                    <p class="card-text">200 points</p>
+                                </div>
 							</div>
 						</div>
 					</div>
 					<div class="carousel-item multi-item">
 						<div class="col-md-3">
 							<div class="card">
-								<div class="card-img">
+								<div class="card-img-top">
 									<img src="/img/g8.jpg" class="img-fluid">
 								</div>
-								
+								<div class="card-body text-center">
+                                    <h6 class="card-title">Gift F</h6>
+                                    <p class="card-text">300 points</p>
+                                </div>
 							</div>
 						</div>
 					</div>
@@ -270,22 +291,22 @@
             <div class="row" style="margin: 0px;">
                 <div class="col-sm-4 p-5">
                     <h5>Contact Us</h5>
-                    <ul style="list-style-type: none; padding: 0px; " >
+                    <ul style="list-style-type: none; padding: 0px; font-size: 13px;" >
                         
                         <li >Email: xxx@xxxx.com</li>
                         <li>Tel: xxxx xxxx</li>
                     </ul>
                     <div style="padding-top: 20px;" >
                         <!-- Facebook -->
-                        <span style="padding-right: 48px;">
+                        <span style="padding-right: 24px;">
                             <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i class="fab fa-facebook fa-lg"></i></a>
                         </span>
                         <!-- Twitter -->
-                        <span class="px-5">
+                        <span class="px-4">
                             <a href="https://twitter.com/" target="_blank" class="social-icon"><i class="fab fa-twitter fa-lg"></i></a>
                         </span>
                         <!-- Instagram -->
-                        <span class="px-5">
+                        <span class="px-4">
                             <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="fab fa-instagram fa-lg"></i></a>
                         </span>
                     
@@ -295,7 +316,7 @@
                 </div>
                 <div class="col-sm-4 p-5">
                     <h5>SiteMap</h5>
-                    <ul style="list-style-type: none; padding: 0px;">
+                    <ul style="list-style-type: none; padding: 0px; font-size: 13px;">
                         
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Go Healthy</a></li>
@@ -306,7 +327,7 @@
                 </div>
                 <div class="col-sm-4 p-5">
                         <h5>Company info</h5>
-                        <ul style="list-style-type: none; padding: 0px;">
+                        <ul style="list-style-type: none; padding: 0px; font-size: 13px;">
                             
                             <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatum nisi minima cumque doloremque alias, laboriosam qui maiores dolorum repellat cum cupiditate dolor deserunt est laudantium! In culpa esse omnis!</li>
                             
@@ -315,8 +336,28 @@
             </div>
         </footer>
       </div>
+      
 
     <script>
+        function calcBMI(){
+        let info = document.querySelectorAll("input");
+        let height=info[0].value/100;
+        let weight=info[1].value;
+        let bmi=weight/(height*2);
+        bmi=bmi.toFixed(1);
+        let grade;
+        if(bmi<18.5){
+            grade=`over light`;
+        }
+        else if(bmi<=22.9){
+            grade=`normal`;
+        }
+        else{
+            grade=`over heavy`;
+        }
+        document.getElementById("bmi").innerText=`${bmi}(${grade})`;
+
+        }
         if (window.innerWidth<=576){        
             let ul = document.getElementsByTagName("ul");
             let li = document.createElement("li");
@@ -328,6 +369,7 @@
             a.className="nav-link text-white";
             a.textContent="Login";
             a.setAttribute("href", "#");
+            a.style.margin="10px";
             ul[0].append(li);
             li.appendChild(a);
             div[3].removeChild(div[3].lastElementChild);

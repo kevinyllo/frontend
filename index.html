@@ -343,7 +343,7 @@
         let info = document.querySelectorAll("input");
         let height=info[0].value/100;
         let weight=info[1].value;
-        let bmi=weight/(height*2);
+        let bmi=weight/(height**2);
         bmi=bmi.toFixed(1);
         let grade;
         if(bmi<18.5){

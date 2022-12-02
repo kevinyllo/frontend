@@ -9,13 +9,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Go Sport</title>
     <style>
-       
+        .row{
+            margin: 0px;
+        }
+        .footer{
+            list-style-type: none;
+            padding: 0px;
+            font-size: 13px;
+        }
         .grid-container{
             display: grid;
             grid-template-columns: auto auto;
-  
         }
-        a{
+        .footer a{
             color: white;
         }
         
@@ -131,11 +137,11 @@
     </button>
     </div>
 
-    <div class="row" style="margin: 0px;">
+    <div class="row">
         <div class="col-sm-9">
             <div class="text-center p-5">
                 <h3>Articles</h3>
-                <br>
+                
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias velit maxime nam iste! Sit ut quam dolorum? Aperiam libero quos minus nisi id voluptatibus. Sit rerum ducimus recusandae enim quis?</p>
             </div>
             <div class="grid-container">
@@ -171,7 +177,7 @@
         </div>
         <div class="col-sm-3">
             <div class="text-center p-5">
-                <h3>BMI Indicator</h3><br>
+                <h3>BMI Indicator</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam totam laudantium dignissimos ipsam, repellat eius recusandae, sapiente quidem asperiores in nemo, a modi culpa blanditiis odit quos quae? Harum, laudantium!</p>
                 <input type="text" id="height" name="height" placeholder="height(cm)" style="width: 100%;"><br><br>
                 <input type="text" id="weight" name="weight" placeholder="weight(kg)" style="width: 100%;"><br><br>
@@ -181,7 +187,7 @@
             
         </div>
       </div>
-      <div class="row" style="margin: 0px;">
+      <div class="row">
         <div class="col-sm-6 p-5">
             <h3>Rewards</h3><br>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam impedit id, perspiciatis quisquam, saepe ipsam eius numquam ab sit exercitationem iure, voluptatem unde vel veritatis esse tempore libero eos sapiente!</p>
@@ -282,10 +288,10 @@
 			</div>
         </div>
         <footer class="bg-success text-white">
-            <div class="row" style="margin: 0px;">
+            <div class="row">
                 <div class="col-sm-4 p-5">
                     <h5>Contact Us</h5>
-                    <ul style="list-style-type: none; padding: 0px; font-size: 13px;" >
+                    <ul class="footer" >
                         
                         <li >Email: xxx@xxxx.com</li>
                         <li>Tel: xxxx xxxx</li>
@@ -308,7 +314,7 @@
                 </div>
                 <div class="col-sm-4 p-5">
                     <h5>SiteMap</h5>
-                    <ul style="list-style-type: none; padding: 0px; font-size: 13px;">
+                    <ul class="footer">
                         
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Go Healthy</a></li>
@@ -319,7 +325,7 @@
                 </div>
                 <div class="col-sm-4 p-5">
                         <h5>Company info</h5>
-                        <ul style="list-style-type: none; padding: 0px; font-size: 13px;">
+                        <ul class="footer">
                             
                             <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatum nisi minima cumque doloremque alias, laboriosam qui maiores dolorum repellat cum cupiditate dolor deserunt est laudantium! In culpa esse omnis!</li>
                             

@@ -10,7 +10,7 @@
     <style>
         .numCount{
             width: 60px;
-            margin: 20px;
+            margin: 40px;
         }
         .card{
             border-width: 0px;
@@ -28,6 +28,23 @@
         }
         .footer a{
             color: white;
+        }
+        .quantity{
+            margin-left: 60px
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-column-gap: 20px;
+        }    
+        @media (max-width: 576px){
+            .grid-container{
+                grid-template-columns: auto auto;
+                grid-column-gap: 10px;
+            }
+        }
+        .hidden{
+            display: none;
         }
     </style>
 </head>
@@ -53,85 +70,88 @@
                     <option value="Gift B">Gift B</option>
                     <option value="Gift C">Gift C</option>
                 </select><br>
-                <input type="radio" id="all" value="all" name="category">All
+                <input type="radio" id="all" value="all" name="category" checked>All
                 <br>
                 <input type="radio" id="equipment" value="equipment" name="category">Sport equipments
                 <br>
-                <input type="radio" id="coupon" value="coupon" name="category">Coupon
-                
+                <input type="radio" id="coupon" value="coupon" name="category">Coupon             
             </div>
         </div>
         <div class="col-sm-6">
-            <div class="card-group">
-                <div class="card mx-3">
+            <div class="grid-container">
+                <div class="card item1 equipment hidden">
                     <div class="card-img-top">
                         <img src="/img/g3.jpg" class="img-fluid">
                     </div>
                     <div class="card-body text-center">
                         <h6 class="card-title">Gift A</h6>
-                        <p class="card-text">50 points</p>
+                        <p class="card-text" data-point=50>50 points</p>
                     </div>
                     <input type="number" id="numOne" name="numOne" class="numCount align-self-center">                
                 </div>
-                <div class="card mx-3">
+                <div class="card item2 equipment hidden">
                     <div class="card-img-top">
                         <img src="/img/g4.jpg" class="img-fluid">
                     </div>
                     <div class="card-body text-center">
                         <h6 class="card-title">Gift B</h6>
-                        <p class="card-text">100 points</p>
+                        <p class="card-text" data-point=100>100 points</p>
                     </div>
                     <input type="number" id="numTwo" name="numTwo" class="numCount align-self-center"> 
                 </div>
-                <div class="card mx-3">
+                <div class="card item3 coupon hidden">
                     <div class="card-img-top">
                         <img src="img/g5.jpg" class="img-fluid">
                     </div>
                     <div class="card-body text-center">
                         <h6 class="card-title">Gift C</h6>
-                        <p class="card-text">100 points</p>
+                        <p class="card-text" data-point=100>100 points</p>
                     </div>
                     <input type="number" id="numThree" name="numThree" class="numCount align-self-center">
+                </div>          
+            <div class="card item4 equipment hidden">
+                <div class="card-img-top">
+                    <img src="/img/g6.jpg" class="img-fluid">
                 </div>
-            
+                <div class="card-body text-center">
+                    <h6 class="card-title">Gift D</h6>
+                    <p class="card-text" data-point=250>250 points</p>
+                </div>
+                <input type="number" id="numFour" name="numFour" class="numCount align-self-center">
             </div>
-            <div class="card-group">
-                <div class="card mx-3">
-                    <div class="card-img-top">
-                        <img src="/img/g6.jpg" class="img-fluid">
-                    </div>
-                    <div class="card-body text-center">
-                        <h6 class="card-title">Gift D</h6>
-                        <p class="card-text">250 points</p>
-                    </div>
-                    <input type="number" id="numFour" name="numFour" class="numCount align-self-center">
-
+            <div class="card item5 coupon hidden">
+                <div class="card-img-top">
+                    <img src="/img/g7.jpg" class="img-fluid">
                 </div>
-                <div class="card mx-3">
-                    <div class="card-img-top">
-                        <img src="/img/g7.jpg" class="img-fluid">
-                    </div>
-                    <div class="card-body text-center">
-                        <h6 class="card-title">Gift E</h6>
-                        <p class="card-text">200 points</p>
-                    </div>
-                    <input type="number" id="numFive" name="numFive" class="numCount align-self-center">
+                <div class="card-body text-center">
+                    <h6 class="card-title">Gift E</h6>
+                    <p class="card-text" data-point=200>200 points</p>
                 </div>
-                <div class="card mx-3">
-                    <div class="card-img-top">
-                        <img src="/img/g8.jpg" class="img-fluid">
-                    </div>
-                    <div class="card-body text-center">
-                        <h6 class="card-title">Gift F</h6>
-                        <p class="card-text">300 points</p>
-                    </div>
-                    <input type="number" id="numSix" name="numSix" class="numCount align-self-center">
-                </div>
-
+                <input type="number" id="numFive" name="numFive" class="numCount align-self-center">
             </div>
-
+            <div class="card item6 coupon hidden">
+                <div class="card-img-top">
+                    <img src="/img/g8.jpg" class="img-fluid">
+                </div>
+                <div class="card-body text-center">
+                    <h6 class="card-title">Gift F</h6>
+                    <p class="card-text" data-point=300>300 points</p>
+                </div>
+                <input type="number" id="numSix" name="numSix" class="numCount align-self-center">
+            </div>
+            </div>
         </div>
-        <div class="col-sm-3"></div>
+        <div class="col-sm-3">
+            <div class="p-3 pb-5 mb-5" style="border: 1px solid black; width: 200px; margin: auto;">
+                <label for="filter" style="margin: 0 0 20px;">Filter</label><br>
+                <ul style="height: 100px;" id="summary">
+                
+                </ul>
+                <hr>
+                <label for="total"><b>Total:</b></label><span id="total"></span>
+                <div class="text-center mt-4"><button type="button" class="btn btn-dark">Confirm</button></div>
+            </div>
+        </div>
     </div>
     <footer class="bg-success text-white">
         <div class="row">
@@ -179,7 +199,85 @@
             </div>
         </div>
     </footer>
+    <script>
+        let products = document.querySelectorAll(".card");
+        let summary = document.getElementById("summary");
+        let category = document.querySelectorAll("input[type=radio]");
+        let inputNum = document.querySelectorAll("input[type=number]");
+        let total = document.getElementById("total");
+        let selectedValue;
+        let displayValue;
+        let prodName;
+        let target;
+        let giftPoint;
+        let sumGiftPoint;
+        
+        for(x of products){
+            x.classList.remove("hidden");
+        }
+        function count(){
+            sumGiftPoint=0;
+            for(x of inputNum){
+                giftPoint=x.previousElementSibling.lastElementChild.dataset.point*x.value;
+                sumGiftPoint+=giftPoint;
+            }
+            total.innerText=` ${sumGiftPoint} points`;
+        }
+        function list(){
+            let li = document.createElement("li");
+                li.innerText=`${prodName} x${displayValue}`;
+                summary.appendChild(li);
+        }
+        function prepare(){          
+                if(x.classList.contains("hidden")!=true){
+                x.classList.add("hidden");
+                }       
+        }
+        addEventListener("change",(e)=>{
+            selectedValue=e.target.value;
+            target=e.target;
 
+            if(e.target.type=="number"){
+                displayValue=selectedValue;
+                prodName=e.target.previousElementSibling.firstElementChild.innerText;
+                
+                for(x of summary.children){           
+                    if(x.innerText.includes(prodName)){
+                        summary.removeChild(x);              
+                    }
+                }              
+                list();
+                count();       
+            }
+            switch(selectedValue){
+                case "all":
+                    for(x of products){
+                        prepare();
+                        if(x.classList.contains("equipment")||x.classList.contains("coupon")){
+                            x.classList.remove("hidden");
+                        }
+                    }
+                    break;
+                case "equipment":
+                    for(x of products){
+                        prepare();
+                        if(x.classList.contains("equipment")){
+                            x.classList.remove("hidden");
+                        }
+                    } 
+                    break;                     
+                case "coupon":
+                    for(x of products){
+                        prepare();
+                        if(x.classList.contains("coupon")){
+                            x.classList.remove("hidden");
+                        }
+       
+                    }
+            }
+        })  
+        
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>

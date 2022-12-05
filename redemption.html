@@ -49,6 +49,37 @@
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-sm bg-light fixed-top justify-content-center"> 
+        <!-- Links -->       
+        <div>
+            <div class="text-center">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo-lg.svg" alt="logo" style="width: 80px;">
+            </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" style="position: fixed; right: 5vw; top: 28px;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="margin: 10px;">
+                        <a class="nav-link text-black" href="#">Home</a>
+                    </li>
+                    <li class="nav-item" style="margin: 10px;">
+                        <a class="nav-link text-black" href="#">Go Healthy</a>
+                    </li>
+                    <li class="nav-item" style="margin: 10px;">
+                        <a class="nav-link text-black" href="#">Go Rewards</a>
+                    </li>
+                    
+                </ul>
+                <div style="position: fixed; right: 30px;">
+                    <button type="button" class="btn btn-success" style="border: 1px white solid; ">Login</button>
+                </div>                
+            </div>
+        </div>
+    </nav>
+    <div style="height: 156px;"></div>
     <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
@@ -87,7 +118,7 @@
                         <h6 class="card-title">Gift A</h6>
                         <p class="card-text" data-point=50>50 points</p>
                     </div>
-                    <input type="number" id="numOne" name="numOne" class="numCount align-self-center">                
+                    <input type="number" id="numOne" name="numOne" class="numCount align-self-center" min="0">                
                 </div>
                 <div class="card item2 equipment hidden">
                     <div class="card-img-top">
@@ -97,7 +128,7 @@
                         <h6 class="card-title">Gift B</h6>
                         <p class="card-text" data-point=100>100 points</p>
                     </div>
-                    <input type="number" id="numTwo" name="numTwo" class="numCount align-self-center"> 
+                    <input type="number" id="numTwo" name="numTwo" class="numCount align-self-center" min="0"> 
                 </div>
                 <div class="card item3 coupon hidden">
                     <div class="card-img-top">
@@ -107,7 +138,7 @@
                         <h6 class="card-title">Gift C</h6>
                         <p class="card-text" data-point=100>100 points</p>
                     </div>
-                    <input type="number" id="numThree" name="numThree" class="numCount align-self-center">
+                    <input type="number" id="numThree" name="numThree" class="numCount align-self-center" min="0">
                 </div>          
             <div class="card item4 equipment hidden">
                 <div class="card-img-top">
@@ -117,7 +148,7 @@
                     <h6 class="card-title">Gift D</h6>
                     <p class="card-text" data-point=250>250 points</p>
                 </div>
-                <input type="number" id="numFour" name="numFour" class="numCount align-self-center">
+                <input type="number" id="numFour" name="numFour" class="numCount align-self-center" min="0">
             </div>
             <div class="card item5 coupon hidden">
                 <div class="card-img-top">
@@ -127,7 +158,7 @@
                     <h6 class="card-title">Gift E</h6>
                     <p class="card-text" data-point=200>200 points</p>
                 </div>
-                <input type="number" id="numFive" name="numFive" class="numCount align-self-center">
+                <input type="number" id="numFive" name="numFive" class="numCount align-self-center" min="0">
             </div>
             <div class="card item6 coupon hidden">
                 <div class="card-img-top">
@@ -137,14 +168,14 @@
                     <h6 class="card-title">Gift F</h6>
                     <p class="card-text" data-point=300>300 points</p>
                 </div>
-                <input type="number" id="numSix" name="numSix" class="numCount align-self-center">
+                <input type="number" id="numSix" name="numSix" class="numCount align-self-center" min="0">
             </div>
             </div>
         </div>
         <div class="col-sm-3">
             <div class="p-3 pb-5 mb-5" style="border: 1px solid black; width: 200px; margin: auto;">
-                <label for="filter" style="margin: 0 0 20px;">Filter</label><br>
-                <ul style="height: 100px;" id="summary">
+                <label for="redeem" style="margin: 0 0 20px;">Redeem</label><br>
+                <ul style="height: 100px; overflow: auto;" id="summary">
                 
                 </ul>
                 <hr>
@@ -226,7 +257,9 @@
         function list(){
             let li = document.createElement("li");
                 li.innerText=`${prodName} x${displayValue}`;
+                if(displayValue!=0){
                 summary.appendChild(li);
+                }
         }
         function prepare(){          
                 if(x.classList.contains("hidden")!=true){
@@ -277,6 +310,25 @@
             }
         })  
         
+    </script>
+    <script>
+        if (window.innerWidth<=576){        
+            let ul = document.getElementsByTagName("ul");
+            let li = document.createElement("li");
+            let a = document.createElement("a");
+            let div = document.getElementsByTagName("div");
+            
+            div[4].style.cssText="height: 96px;";
+            li.className="nav-item";
+            a.className="nav-link text-black";
+            a.textContent="Login";
+            a.setAttribute("href", "#");
+            a.style.margin="10px";
+            ul[0].append(li);
+            li.appendChild(a);
+            div[3].removeChild(div[3].lastElementChild);
+            div[2].removeChild(div[2].lastElementChild);
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>

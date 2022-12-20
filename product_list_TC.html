@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Go Sport</title>
+    <style>
+        .card-img-top img{
+            height: 170px;
+            display: block;
+            margin: auto;
+        }
+        .card{
+            border-width: 0px;
+        }
+        .card-group{
+            margin-bottom: 30px;
+        }
+        .row{
+            margin: 0px;
+        }
+        .footer{
+            list-style-type: none;
+            padding: 0px;
+            font-size: 13px;
+        }
+        .footer a{
+            color: white;
+        }
+        .quantity{
+            margin-left: 60px
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: 250px 250px 250px 250px;
+            grid-column-gap: 20px;
+            height: 600px;
+            
+        }    
+        @media (max-width: 576px){
+            .grid-container{
+                grid-template-columns: 178px 178px;
+                grid-column-gap: 10px;
+                overflow: auto;
+            }
+            
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light fixed-top justify-content-center"> 
+        <!-- Links -->       
+        <div>
+            <div class="text-center">
+            <a class="navbar-brand" href="./index.html">
+                <img src="img/logo-lg.svg" alt="logo" style="width: 80px;">
+            </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" style="position: fixed; right: 5vw; top: 28px;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="margin: 10px;">
+                        <a class="nav-link text-black" href="./index.html">首頁</a>
+                    </li>
+                    <li class="nav-item" style="margin: 10px;">
+                        <a class="nav-link text-black" href="./Article_list.html">健康資訊</a>
+                    </li>
+                    <li class="nav-item" style="margin: 10px;">
+                        <a class="nav-link text-black" href="./product_list.html">健康獎賞</a>
+                    </li>
+                    
+                </ul>
+                <div style="position: fixed; right: 30px;">
+                    <a href="./login.html" class="btn btn-success" style="border: 1px white solid;">登入</a>
+                </div>                
+            </div>
+        </div>
+    </nav>
+    <div style="height: 156px;"></div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="text-center p-5">
+                <h3>健康獎賞禮品</h3>
+                
+                <p>一發選願熱來記往大出。年家微我生了音見自，只包唱一西作把開依態作而，高良著國界，式拿找熱歷可以功未確房件每弟及，聽告參中投能進不家間當進活房示入比處手所高了外業酒突此明：立願專。候是民再定此者易其許件天他要上夜旅來生</p>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="p-3 pb-5 mb-5" style="border: 1px solid black; width: 200px; margin: auto;">
+                <label for="filter" style="margin: 0 0 20px;">篩選器</label><br>
+                <select name="selReward" id="selReward" style="margin: 0 0 10px;">
+                    <option value="" selected>選擇</option>
+                    <option value="100">1-100 點數</option>
+                    <option value="200">101-200 點數</option>
+                    <option value="300">201-300 點數</option>
+                    <option value="allPts">全部</option>
+                </select><br>
+                <input type="radio" id="all" value="all" name="category" checked>全部
+                <br>
+                <input type="radio" id="equipment" value="equipment" name="category">運動裝備
+                <br>
+                <input type="radio" id="coupon" value="coupon" name="category">禮劵             
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="grid-container">
+                <div class="card item1 equipment hidden">
+                    <div class="card-img-top">
+                        <img src="/img/g3.jpg" class="img-fluid">
+                    </div>
+                    <div class="card-body text-center 100">
+                        <h6 class="card-title">禮品 A</h6>
+                        <p class="card-text" data-point=50>50 點數</p>
+                    </div>
+                                    
+                </div>
+                <div class="card item2 equipment hidden 100">
+                    <div class="card-img-top">
+                        <img src="/img/g4.jpg" class="img-fluid">
+                    </div>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">禮品 B</h6>
+                        <p class="card-text" data-point=100>100 點數</p>
+                    </div>
+                     
+                </div>
+                <div class="card item3 coupon hidden 100">
+                    <div class="card-img-top">
+                        <img src="img/g5.jpg" class="img-fluid">
+                    </div>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">禮品 C</h6>
+                        <p class="card-text" data-point=100>100 點數</p>
+                    </div>
+                    
+                </div>          
+            <div class="card item4 equipment hidden 300">
+                <div class="card-img-top">
+                    <img src="/img/g6.jpg" class="img-fluid">
+                </div>
+                <div class="card-body text-center">
+                    <h6 class="card-title">禮品 D</h6>
+                    <p class="card-text" data-point=250>250 點數</p>
+                </div>
+                
+            </div>
+            <div class="card item5 coupon hidden 200">
+                <div class="card-img-top">
+                    <img src="/img/g7.jpg" class="img-fluid">
+                </div>
+                <div class="card-body text-center">
+                    <h6 class="card-title">禮品 E</h6>
+                    <p class="card-text" data-point=200>200 點數</p>
+                </div>
+                
+            </div>
+            <div class="card item6 coupon hidden 300">
+                <div class="card-img-top">
+                    <img src="/img/g8.jpg" class="img-fluid">
+                </div>
+                <div class="card-body text-center">
+                    <h6 class="card-title">禮品 F</h6>
+                    <p class="card-text" data-point=300>300 點數</p>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+        
+    </div>
+    <footer class="bg-success text-white">
+        <div class="row">
+            <div class="col-sm-4 p-5">
+                <h5>聯絡我們</h5>
+                <ul class="footer" >
+                    
+                    <li>業務電郵: xxx@xxxx.com</li>
+                    <li>查詢電話: xxxx xxxx</li>
+                </ul>
+                <div class="footer">
+                    <span style="padding-right: 10px;"><a href="">ENG</a></span><span><a href="">簡</a></span>
+                </div>
+                <div style="padding-top: 20px;" class="footer">
+                    <!-- Facebook -->
+                    <span style="padding-right: 24px;">
+                        <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i class="fab fa-facebook fa-lg"></i></a>
+                    </span>
+                    <!-- Twitter -->
+                    <span class="px-4">
+                        <a href="https://twitter.com/" target="_blank" class="social-icon"><i class="fab fa-twitter fa-lg"></i></a>
+                    </span>
+                    <!-- Instagram -->
+                    <span class="px-4">
+                        <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="fab fa-instagram fa-lg"></i></a>
+                    </span>
+
+                </div>
+            </div>
+            <div class="col-sm-4 p-5">
+                <h5>網站地圖</h5>
+                <ul class="footer">
+                    
+                    <li><a href="/index.html">首頁</a></li>
+                    <li><a href="/Article_list.html">健康資訊</a></li>
+                    <li><a href="/product_list.html">健康獎賞</a></li>
+                    
+                </ul>
+            </div>
+            <div class="col-sm-4 p-5">
+                    <h5>公司資料</h5>
+                    <ul class="footer">
+                        
+                        <li>一發選願熱來記往大出。年家微我生了音見自，只包唱一西作把開依態作而，高良著國界，式拿找熱歷可以功未確房件每弟及，聽告參中投能進不家間當進活房示入比處手所高了外業酒突此明：立願專。候是民再定此者易其許件天他要上夜旅來生業：讀節像界多有、</li>
+                        
+                    </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let products = document.querySelectorAll(".card");
+        let summary = document.getElementById("summary");
+        let category = document.querySelectorAll("input[type=radio]");
+        let inputNum = document.querySelectorAll("input[type=number]");
+        let total = document.getElementById("total");
+        let options = document.querySelectorAll("option");
+        let selectedValue;
+        let displayValue;
+        let prodName;
+        let target;
+        
+        for(x of products){
+            x.classList.remove("hidden");
+        }
+        
+        function prepare(){          
+                if(x.classList.contains("hidden")!=true){
+                x.classList.add("hidden");
+                }       
+        }
+              
+        addEventListener("change",(e)=>{
+            selectedValue=e.target.value;
+            target=e.target;
+
+            switch(selectedValue){
+                case "all":
+                    for(x of products){
+                        prepare();
+                        if(x.classList.contains("equipment")||x.classList.contains("coupon")){
+                            x.classList.remove("hidden");
+                        }
+                    }
+                    options[0].selected=true;      
+                    break;
+                case "equipment":
+                    for(x of products){
+                        prepare();
+                        if(x.classList.contains("equipment")){
+                            x.classList.remove("hidden");
+                        }
+                    }
+                    options[0].selected=true;
+                    break;                     
+                case "coupon":
+                    for(x of products){
+                        prepare();
+                        if(x.classList.contains("coupon")){
+                            x.classList.remove("hidden");
+                        }
+       
+                    }
+                    options[0].selected=true;
+                    break;
+                case "100":
+                    for(x of products){
+                        prepare();
+                        if(x.classList.contains("100")){
+                            x.classList.remove("hidden");
+                        }
+                    }
+                    category[0].checked=true;
+                    break;
+                case "200":
+                    for(x of products){
+                        prepare();
+                        if(x.classList.contains("200")){
+                            x.classList.remove("hidden");
+                        }
+                    }
+                    category[0].checked=true;
+                    break;
+                case "300":
+                    for(x of products){
+                        prepare();
+                        if(x.classList.contains("300")){
+                            x.classList.remove("hidden");
+                        }
+                    }
+                    category[0].checked=true;
+                    break;
+                case "allPts":
+                    for(x of products){
+                        prepare();
+                        
+                        x.classList.remove("hidden");
+                        
+                    }
+                    category[0].checked=true;
+                    break;
+                
+            }
+        })  
+    
+    </script>
+    <script>
+        //Navigation bar for mobile device
+        if (window.innerWidth<=576){        
+            let ul = document.getElementsByTagName("ul");
+            let li = document.createElement("li");
+            let a = document.createElement("a");
+            let div = document.getElementsByTagName("div");
+            
+            div[4].style.cssText="height: 96px;";
+            li.className="nav-item";
+            a.className="nav-link text-black";
+            a.textContent="登入";
+            a.setAttribute("href", "./login.html");
+            a.style.margin="10px";
+            ul[0].append(li);
+            li.appendChild(a);
+            div[3].removeChild(div[3].lastElementChild);
+            div[2].removeChild(div[2].lastElementChild);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

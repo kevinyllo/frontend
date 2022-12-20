@@ -8,10 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Go Sport</title>
     <style>
-        .numCount{
-            width: 60px;
-            margin: 20px;
-        }
         .card-img-top img{
             height: 170px;
         }
@@ -37,11 +33,9 @@
         }
         .grid-container{
             display: grid;
-            grid-template-columns: 250px 250px 250px;
+            grid-template-columns: 250px 250px 250px 250px;
             grid-column-gap: 20px;
-            height: 800px;
-            
-            
+            height: 600px;
             
         }    
         @media (max-width: 576px){
@@ -118,18 +112,17 @@
                 <input type="radio" id="coupon" value="coupon" name="category">Coupon             
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-9">
             <div class="grid-container">
-                <div class="card item1 equipment hidden  100">
+                <div class="card item1 equipment hidden">
                     <div class="card-img-top">
                         <img src="/img/g3.jpg" class="img-fluid">
                     </div>
-                    <div class="card-body text-center">
+                    <div class="card-body text-center 100">
                         <h6 class="card-title">Gift A</h6>
                         <p class="card-text" data-point=50>50 points</p>
-                        <input type="number" id="numOne" name="numOne" class="numCount align-self-center" min="0" placeholder="Qty">
                     </div>
-                    
+                                    
                 </div>
                 <div class="card item2 equipment hidden 100">
                     <div class="card-img-top">
@@ -138,7 +131,6 @@
                     <div class="card-body text-center">
                         <h6 class="card-title">Gift B</h6>
                         <p class="card-text" data-point=100>100 points</p>
-                        <input type="number" id="numTwo" name="numTwo" class="numCount align-self-center" min="0" placeholder="Qty">
                     </div>
                      
                 </div>
@@ -149,7 +141,6 @@
                     <div class="card-body text-center">
                         <h6 class="card-title">Gift C</h6>
                         <p class="card-text" data-point=100>100 points</p>
-                        <input type="number" id="numThree" name="numThree" class="numCount align-self-center" min="0" placeholder="Qty">
                     </div>
                     
                 </div>          
@@ -160,7 +151,6 @@
                 <div class="card-body text-center">
                     <h6 class="card-title">Gift D</h6>
                     <p class="card-text" data-point=250>250 points</p>
-                    <input type="number" id="numFour" name="numFour" class="numCount align-self-center" min="0" placeholder="Qty">
                 </div>
                 
             </div>
@@ -171,7 +161,6 @@
                 <div class="card-body text-center">
                     <h6 class="card-title">Gift E</h6>
                     <p class="card-text" data-point=200>200 points</p>
-                    <input type="number" id="numFive" name="numFive" class="numCount align-self-center" min="0" placeholder="Qty">
                 </div>
                 
             </div>
@@ -182,23 +171,12 @@
                 <div class="card-body text-center">
                     <h6 class="card-title">Gift F</h6>
                     <p class="card-text" data-point=300>300 points</p>
-                    <input type="number" id="numSix" name="numSix" class="numCount align-self-center" min="0" placeholder="Qty">
                 </div>
                 
             </div>
             </div>
         </div>
-        <div class="col-sm-3">
-            <div class="p-3 pb-5 mb-5" style="border: 1px solid black; width: 200px; margin: auto;">
-                <label for="redeem" style="margin: 0 0 20px;">Redeem</label><br>
-                <ul style="height: 100px; overflow: auto;" id="summary">
-                
-                </ul>
-                <hr>
-                <label for="total"><b>Total:</b></label><span id="total"></span>
-                <div class="text-center mt-4"><button type="button" class="btn btn-dark">Confirm</button></div>
-            </div>
-        </div>
+        
     </div>
     <footer class="bg-success text-white">
         <div class="row">
@@ -265,42 +243,17 @@
         for(x of products){
             x.classList.remove("hidden");
         }
-        function count(){
-            sumGiftPoint=0;
-            for(x of inputNum){
-                giftPoint=x.previousElementSibling.dataset.point*x.value;
-                sumGiftPoint+=giftPoint;
-            }
-            total.innerText=` ${sumGiftPoint} points`;
-        }
-        function list(){
-            let li = document.createElement("li");
-                li.innerText=`${prodName} x${displayValue}`;
-                if(displayValue!=0){
-                summary.appendChild(li);
-                }
-        }
+        
         function prepare(){          
                 if(x.classList.contains("hidden")!=true){
                 x.classList.add("hidden");
                 }       
         }
+              
         addEventListener("change",(e)=>{
             selectedValue=e.target.value;
             target=e.target;
 
-            if(e.target.type=="number"){
-                displayValue=selectedValue;
-                prodName=e.target.previousElementSibling.previousElementSibling.innerText;
-                
-                for(x of summary.children){           
-                    if(x.innerText.includes(prodName)){
-                        summary.removeChild(x);              
-                    }
-                }              
-                list();
-                count();       
-            }
             switch(selectedValue){
                 case "all":
                     for(x of products){
@@ -369,7 +322,7 @@
                 
             }
         })  
-        
+    
     </script>
     <script>
         //Navigation bar for mobile device

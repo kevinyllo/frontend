@@ -9,14 +9,13 @@
     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <title>Go Sport</title>
+    <title>Go Rewards | Go Sport</title>
     <style>
         .numCount{
             width: 60px;
             margin: 20px;
         }
         .card-img-top img{
-            height: 170px;
             display: block;
             margin: auto;
         }
@@ -42,7 +41,7 @@
         }
         .grid-container{
             display: grid;
-            grid-template-columns: 250px 250px 250px;
+            grid-template-columns: auto auto auto;
             grid-column-gap: 20px;
             height: 800px;
             
@@ -51,7 +50,7 @@
         }    
         @media (max-width: 576px){
             .grid-container{
-                grid-template-columns: 178px 178px;
+                grid-template-columns: auto auto;
                 grid-column-gap: 10px;
                 overflow: auto;
             }
@@ -68,7 +67,7 @@
         <div>
             <div class="text-center">
             <a class="navbar-brand" href="./index.html">
-                <img src="img/logo-lg.svg" alt="logo" style="width: 80px;">
+                <img src="img/logo.svg" alt="logo" style="width: 80px;">
             </a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" style="position: fixed; right: 5vw; top: 28px;">
@@ -83,7 +82,7 @@
                         <a class="nav-link text-black" href="./Article_list.html">健康資訊</a>
                     </li>
                     <li class="nav-item" style="margin: 10px;">
-                        <a class="nav-link text-black" href="./product_list.html">健康獎賞</a>
+                        <a class="nav-link text-black" href="./product_list.html">Go Rewards</a>
                     </li>
                     
                 </ul>
@@ -98,7 +97,7 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             <div class="text-center p-5">
-                <h3>健康獎賞禮品兌換</h3>
+                <h3>兌換 Go Rewards 禮品</h3>
                 
                 <p>一發選願熱來記往大出。年家微我生了音見自，只包唱一西作把開依態作而，高良著國界，式拿找熱歷可以功未確房件每弟及，聽告參中投能進不家間當進活房示入比處手所高了外業酒突此明：立願專。候是民再定此者易其許件天他要上夜旅來生</p>
             </div>
@@ -108,85 +107,85 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="p-3 pb-5 mb-5" style="border: 1px solid black; width: 200px; margin: auto;">
-                <label for="filter" style="margin: 0 0 20px;">篩選器</label><br>
+                <label for="filter" style="margin: 0 0 20px;"><strong>篩選</strong></label><br>
                 <select name="selReward" id="selReward" style="margin: 0 0 10px;">
                     <option value="" selected>選擇</option>
-                    <option value="100">1-100 點數</option>
-                    <option value="200">101-200 點數</option>
-                    <option value="300">201-300 點數</option>
+                    <option value="100">1-100 積分</option>
+                    <option value="200">101-200 積分</option>
+                    <option value="300">201-300 積分</option>
                     <option value="allPts">全部</option>
                 </select><br>
                 <input type="radio" id="all" value="all" name="category" checked>全部
                 <br>
                 <input type="radio" id="equipment" value="equipment" name="category">運動裝備
                 <br>
-                <input type="radio" id="coupon" value="coupon" name="category">禮劵             
+                <input type="radio" id="coupon" value="coupon" name="category">優惠劵             
             </div>
         </div>
         <div class="col-sm-6">
             <div class="grid-container">
-                <div class="card item1 equipment hidden  100">
+                <div class="card item1 coupon hidden  100">
                     <div class="card-img-top">
-                        <img src="/img/g3.jpg" class="img-fluid">
+                        <img src="img/gift1.png" class="img-fluid">
                     </div>
                     <div class="card-body text-center">
-                        <h6 class="card-title">禮品 A</h6>
-                        <p class="card-text" data-point=50>50 點數</p>
+                        <h6 class="card-title">10% 折扣優惠劵</h6>
+                        <p class="card-text" data-point=50>50 積分</p>
                         <input type="number" id="numOne" name="numOne" class="numCount align-self-center" min="0" placeholder="數量">
                     </div>
                     
                 </div>
                 <div class="card item2 equipment hidden 100">
                     <div class="card-img-top">
-                        <img src="/img/g4.jpg" class="img-fluid">
+                        <img src="img/gift2.png" class="img-fluid">
                     </div>
                     <div class="card-body text-center">
-                        <h6 class="card-title">禮品 B</h6>
-                        <p class="card-text" data-point=100>100 點數</p>
+                        <h6 class="card-title">跳繩 (1件)</h6>
+                        <p class="card-text" data-point=100>100 積分</p>
                         <input type="number" id="numTwo" name="numTwo" class="numCount align-self-center" min="0" placeholder="數量">
                     </div>
                      
                 </div>
                 <div class="card item3 coupon hidden 100">
                     <div class="card-img-top">
-                        <img src="img/g5.jpg" class="img-fluid">
+                        <img src="img/gift3.png" class="img-fluid">
                     </div>
                     <div class="card-body text-center">
-                        <h6 class="card-title">禮品 C</h6>
-                        <p class="card-text" data-point=100>100 點數</p>
+                        <h6 class="card-title">運動襪 (1對)</h6>
+                        <p class="card-text" data-point=100>100 積分</p>
                         <input type="number" id="numThree" name="numThree" class="numCount align-self-center" min="0" placeholder="數量">
                     </div>
                     
                 </div>          
             <div class="card item4 equipment hidden 300">
                 <div class="card-img-top">
-                    <img src="/img/g6.jpg" class="img-fluid">
+                    <img src="img/gift4.png" class="img-fluid">
                 </div>
                 <div class="card-body text-center">
-                    <h6 class="card-title">禮品 D</h6>
-                    <p class="card-text" data-point=250>250 點數</p>
+                    <h6 class="card-title">30% 折扣優惠劵</h6>
+                    <p class="card-text" data-point=250>250 積分</p>
                     <input type="number" id="numFour" name="numFour" class="numCount align-self-center" min="0" placeholder="數量">
                 </div>
                 
             </div>
             <div class="card item5 coupon hidden 200">
                 <div class="card-img-top">
-                    <img src="/img/g7.jpg" class="img-fluid">
+                    <img src="img/gift5.png" class="img-fluid">
                 </div>
                 <div class="card-body text-center">
-                    <h6 class="card-title">禮品 E</h6>
-                    <p class="card-text" data-point=200>200 點數</p>
+                    <h6 class="card-title">運動水樽 (1個)</h6>
+                    <p class="card-text" data-point=200>200 積分</p>
                     <input type="number" id="numFive" name="numFive" class="numCount align-self-center" min="0" placeholder="數量">
                 </div>
                 
             </div>
             <div class="card item6 coupon hidden 300">
                 <div class="card-img-top">
-                    <img src="/img/g8.jpg" class="img-fluid">
+                    <img src="img/gift6.png" class="img-fluid">
                 </div>
                 <div class="card-body text-center">
-                    <h6 class="card-title">禮品 F</h6>
-                    <p class="card-text" data-point=300>300 點數</p>
+                    <h6 class="card-title">50% 折扣優惠劵</h6>
+                    <p class="card-text" data-point=300>300 積分</p>
                     <input type="number" id="numSix" name="numSix" class="numCount align-self-center" min="0" placeholder="數量">
                 </div>
                 
@@ -195,7 +194,7 @@
         </div>
         <div class="col-sm-3">
             <div class="p-3 pb-5 mb-5" style="border: 1px solid black; width: 200px; margin: auto;">
-                <label for="redeem" style="margin: 0 0 20px;">兌換</label><br>
+                <label for="redeem" style="margin: 0 0 20px;"><strong>兌換</strong></label><br>
                 <ul style="height: 100px; overflow: auto;" id="summary">
                 
                 </ul>
@@ -211,8 +210,8 @@
                 <h5>聯絡我們</h5>
                 <ul class="footer" >
                     
-                    <li>業務電郵: xxx@xxxx.com</li>
-                    <li>查詢電話: xxxx xxxx</li>
+                  <li>Email: enquiry@GoSport.com</li>
+                  <li>電話: 2345 6789</li>
                 </ul>
                 <div class="footer">
                     <span style="padding-right: 10px;"><a href="">ENG</a></span><span><a href="">簡</a></span>
@@ -234,22 +233,23 @@
                 </div>
             </div>
             <div class="col-sm-4 p-5">
-                <h5>網站地圖</h5>
+                <h5>網站導覽</h5>
                 <ul class="footer">
-                    
-                    <li><a href="/index.html">首頁</a></li>
-                    <li><a href="/Article_list.html">健康資訊</a></li>
-                    <li><a href="/product_list.html">健康獎賞</a></li>
+                  
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="go_healthy.html">運動資訊</a></li>
+                <li><a href="product_list.html">Go Rewards</a></li>
+                <li><a href="newsroom_faq.html">最新消息 & FAQ</a></li>
                     
                 </ul>
             </div>
             <div class="col-sm-4 p-5">
-                    <h5>公司資料</h5>
-                    <ul class="footer">
-                        
-                        <li>一發選願熱來記往大出。年家微我生了音見自，只包唱一西作把開依態作而，高良著國界，式拿找熱歷可以功未確房件每弟及，聽告參中投能進不家間當進活房示入比處手所高了外業酒突此明：立願專。候是民再定此者易其許件天他要上夜旅來生業：讀節像界多有、</li>
-                        
-                    </ul>
+                <h5>公司簡介</h5>
+                <ul class="footer">
+                    
+                    <li>Go Sport 主要售賣各類運動產品，同時致力向公眾推廣運動和健康的重要性。透過我們的Go Rewards計劃，希望大眾在接收日常健康資訊的同時，能喚起您對參與各種體育活動的興趣！讓我們一起，更健康，更強壯！</li>
+                    
+                </ul>
             </div>
         </div>
     </footer>
@@ -276,7 +276,7 @@
                 giftPoint=x.previousElementSibling.dataset.point*x.value;
                 sumGiftPoint+=giftPoint;
             }
-            total.innerText=` ${sumGiftPoint} 點數`;
+            total.innerText=` ${sumGiftPoint} 積分`;
         }
         function list(){
             let li = document.createElement("li");

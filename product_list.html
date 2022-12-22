@@ -9,10 +9,9 @@
     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <title>Go Sport</title>
+    <title>Go Rewards｜Go Sport</title>
     <style>
         .card-img-top img{
-            height: 170px;
             display: block;
             margin: auto;
         }
@@ -45,7 +44,7 @@
         }    
         @media (max-width: 576px){
             .grid-container{
-                grid-template-columns: 178px 178px;
+                grid-template-columns: auto auto;
                 grid-column-gap: 10px;
                 overflow: auto;
             }
@@ -62,7 +61,7 @@
         <div>
             <div class="text-center">
             <a class="navbar-brand" href="./index.html">
-                <img src="img/logo-lg.svg" alt="logo" style="width: 80px;">
+                <img src="img/logo.svg" alt="logo" style="width: 80px;">
             </a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" style="position: fixed; right: 5vw; top: 28px;">
@@ -71,13 +70,13 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item" style="margin: 10px;">
-                        <a class="nav-link text-black" href="./index.html">Home</a>
+                        <a class="nav-link text-black" href="index.html">Home</a>
                     </li>
                     <li class="nav-item" style="margin: 10px;">
-                        <a class="nav-link text-black" href="./Article_list.html">Go Healthy</a>
+                        <a class="nav-link text-black" href="go_healthy.html">Go Healthy</a>
                     </li>
                     <li class="nav-item" style="margin: 10px;">
-                        <a class="nav-link text-black" href="./product_list.html">Go Rewards</a>
+                        <a class="nav-link text-black" href="product_list.html">Go Rewards</a>
                     </li>
                     
                 </ul>
@@ -94,7 +93,7 @@
             <div class="text-center p-5">
                 <h3>Rewards Redemption</h3>
                 
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias velit maxime nam iste! Sit ut quam dolorum? Aperiam libero quos minus nisi id voluptatibus. Sit rerum ducimus recusandae enim quis?</p>
+                <p>The choice is yours. Exclusive sports equipments and promotional discounted coupons are availble for your selection. You can use the rewards earned in our website to redeem items please you. </p>
             </div>
         </div>
         <div class="col-sm-3"></div>
@@ -102,7 +101,7 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="p-3 pb-5 mb-5" style="border: 1px solid black; width: 200px; margin: auto;">
-                <label for="filter" style="margin: 0 0 20px;">Filter</label><br>
+                <label for="filter" style="margin: 0 0 20px;"><strong>Filter</strong></label><br>
                 <select name="selReward" id="selReward" style="margin: 0 0 10px;">
                     <option value="" selected>Select</option>
                     <option value="100">1-100 points</option>
@@ -119,62 +118,62 @@
         </div>
         <div class="col-sm-9">
             <div class="grid-container">
-                <div class="card item1 equipment hidden">
+                <div class="card item1 coupon hidden">
                     <div class="card-img-top">
-                        <img src="/img/g3.jpg" class="img-fluid">
+                        <img src="img/gift1.png" class="img-fluid">
                     </div>
-                    <div class="card-body text-center 100">
-                        <h6 class="card-title">Gift A</h6>
-                        <p class="card-text" data-point=50>50 points</p>
+                    <div class="card-body coupon text-center 100">
+                        <h6 class="card-title">10% discount code</h6>
+                        <p class="card-text" data-point=50><l>50 points</l></p>
                     </div>
                                     
                 </div>
                 <div class="card item2 equipment hidden 100">
                     <div class="card-img-top">
-                        <img src="/img/g4.jpg" class="img-fluid">
+                        <img src="img/gift2.png" class="img-fluid">
                     </div>
                     <div class="card-body text-center">
-                        <h6 class="card-title">Gift B</h6>
+                        <h6 class="card-title">Jump rope (1 pc)</h6>
                         <p class="card-text" data-point=100>100 points</p>
                     </div>
                      
                 </div>
-                <div class="card item3 coupon hidden 100">
+                <div class="card item3 equipment hidden 100">
                     <div class="card-img-top">
-                        <img src="img/g5.jpg" class="img-fluid">
+                        <img src="img/gift3.png" class="img-fluid">
                     </div>
                     <div class="card-body text-center">
-                        <h6 class="card-title">Gift C</h6>
+                        <h6 class="card-title">Sport socks (1 pair)</h6>
                         <p class="card-text" data-point=100>100 points</p>
                     </div>
                     
                 </div>          
-            <div class="card item4 equipment hidden 300">
+            <div class="card item4 coupon hidden 300">
                 <div class="card-img-top">
-                    <img src="/img/g6.jpg" class="img-fluid">
+                    <img src="img/gift4.png" class="img-fluid">
                 </div>
                 <div class="card-body text-center">
-                    <h6 class="card-title">Gift D</h6>
+                    <h6 class="card-title">30% discount code</h6>
                     <p class="card-text" data-point=250>250 points</p>
                 </div>
                 
             </div>
-            <div class="card item5 coupon hidden 200">
+            <div class="card item5 equipment hidden 200">
                 <div class="card-img-top">
-                    <img src="/img/g7.jpg" class="img-fluid">
+                    <img src="img/gift5.png" class="img-fluid">
                 </div>
                 <div class="card-body text-center">
-                    <h6 class="card-title">Gift E</h6>
+                    <h6 class="card-title">Watter bottle (1 pc)</h6>
                     <p class="card-text" data-point=200>200 points</p>
                 </div>
                 
             </div>
             <div class="card item6 coupon hidden 300">
                 <div class="card-img-top">
-                    <img src="/img/g8.jpg" class="img-fluid">
+                    <img src="img/gift6.png" class="img-fluid">
                 </div>
                 <div class="card-body text-center">
-                    <h6 class="card-title">Gift F</h6>
+                    <h6 class="card-title">50% discount code</h6>
                     <p class="card-text" data-point=300>300 points</p>
                 </div>
                 
@@ -188,9 +187,9 @@
             <div class="col-sm-4 p-5">
                 <h5>Contact Us</h5>
                 <ul class="footer" >
-                    
-                    <li >Email: xxx@xxxx.com</li>
-                    <li>Tel: xxxx xxxx</li>
+
+                <li>Email: enquiry@GoSport.com</li>
+                <li>Tel: 2345 6789</li>
                 </ul>
                 <div class="footer">
                     <span style="padding-right: 10px;"><a href="">繁</a></span><span><a href="">簡</a></span>
@@ -212,20 +211,21 @@
                 </div>
             </div>
             <div class="col-sm-4 p-5">
-                <h5>SiteMap</h5>
+                <h5>Site Map</h5>
                 <ul class="footer">
-                    
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/Article_list.html">Go Healthy</a></li>
-                    <li><a href="/product_list.html">Go Rewards</a></li>
-                    
-                </ul>
+                  
+                <li><a href="index.html">Home</a></li>
+                <li><a href="go_healthy.html">Go Healthy</a></li>
+                <li><a href="product_list.html">Go Rewards</a></li>
+                <li><a href="newsroom_faq.html">Newsroom & FAQ</a></li>
+                  
+              </ul>
             </div>
             <div class="col-sm-4 p-5">
-                    <h5>Company info</h5>
+                    <h5>Company Info</h5>
                     <ul class="footer">
                         
-                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatum nisi minima cumque doloremque alias, laboriosam qui maiores dolorum repellat cum cupiditate dolor deserunt est laudantium! In culpa esse omnis!</li>
+                        <li>Go Sport is a sport equipment company, and we also committed to promoting the importance of exercise and health to the public. Through our Go Rewards program, we hope that the public can arouse your interest in participating in various sports activities while receiving daily health information. Let's be healthier and stronger together!</li>
                         
                     </ul>
             </div>

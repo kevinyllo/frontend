@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="css/all.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <title>Newsroom & FAQ | Go Sport</title>
+
+    <style>
+        .center_component {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 5vh;
+        }
+
+        .accordion {
+            width: 90%;
+        }
+
+        .headline{
+            padding-top: 3vh;
+            padding-bottom: 5vh;
+        }
+
+        :root {
+            --bs-accordion-active-color: #198754 !important; 
+            
+        }
+
+        .table {
+            width: 90%;
+        }
+
+        .footer{
+            list-style-type: none;
+            padding: 0px;
+            font-size: 13px;
+        }
+        .footer a{
+            color: white;
+        }
+
+
+    </style>
+  </head>
+
+
+  <body>
+      <nav class="navbar navbar-expand-sm bg-light fixed-top justify-content-center"> 
+        <!-- Links -->       
+        <div>
+            <div class="text-center">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.svg" alt="logo" style="width: 80px;">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" style="position: fixed; right: 5vw; top: 28px;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="margin: 10px;">
+                        <a class="nav-link text-black" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item" style="margin: 10px;">
+                        <a class="nav-link text-black" href="go_healthy.html">Go Healthy</a>
+                    </li>
+                    <li class="nav-item" style="margin: 10px;">
+                        <a class="nav-link text-black" href="product_list.html">Go Rewards</a>
+                    </li>
+                    
+                </ul>
+                <div style="position: fixed; right: 30px;">
+                    <button type="button" class="btn btn-success" style="border: 1px white solid; ">Login</button>
+                </div>                
+            </div>
+        </div>
+    </nav>
+    <div style="height: 156px;"></div>
+    <!--End of Navigation-->
+
+    <!--Newsroom-->
+    <h2 class="text-center headline" id="news">Newsroom</h2>
+    <div class="center_component">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Title</th>
+            <th scope="col">Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">23/12/2022</th>
+            <td>Go Rewards is launching now! Get bonus points till 31/12!</td>
+            <td><a href="#">Click here</a></td>
+          </tr>
+          <tr>
+            <th scope="row">20/12/2022</th>
+            <td>Go Sport's rewarding programme is launching soon!</td>
+            <td><a href="#">Click here</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      <!--End of Newsroom-->
+
+
+
+
+
+      <!--FAQ-->
+      <h2 class="text-center headline" id="faq">Frequent Ask Question (FAQ)</h2>
+      <div class="center_component">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <strong>What is Go Rewards?</strong>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              This is a rewards programme launched by Go Sport Company Ltd. Members can redeem exciting rewards through this platform, including coupons, merchants etc.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <strong>How to join Go Rewards?</strong>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              You may click the "Login" button on the right top corner, it will lead you to login page. There will be a "Sign up" button right there, please fill in the required information.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <strong>Is is free?</strong>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Yes, it is totally free! There is no extra fee for membership registration, just simply sign up.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of FAQ-->
+
+    <!--Footer-->
+    <footer class="bg-success text-white">
+      <div class="row">
+          <div class="col-sm-4 p-5">
+              <h5>Contact Us</h5>
+              <ul class="footer" >
+                  
+                <li>Email: enquiry@GoSport.com</li>
+                <li>Tel: 2345 6789</li>
+              </ul>
+              <div class="footer">
+                  <span style="padding-right: 10px;"><a href="#">繁</a></span><span><a href="#">簡</a></span>
+              </div>
+              <div style="padding-top: 20px;" class="footer">
+                  <!-- Facebook -->
+                  <span style="padding-right: 24px;">
+                      <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i class="fab fa-facebook fa-lg"></i></a>
+                  </span>
+                  <!-- Twitter -->
+                  <span class="px-4">
+                      <a href="https://twitter.com/" target="_blank" class="social-icon"><i class="fab fa-twitter fa-lg"></i></a>
+                  </span>
+                  <!-- Instagram -->
+                  <span class="px-4">
+                      <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="fab fa-instagram fa-lg"></i></a>
+                  </span>
+
+              </div>
+          </div>
+          <div class="col-sm-4 p-5">
+              <h5>Site Map</h5>
+              <ul class="footer">
+                  
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="./Article_list.html">Go Healthy</a></li>
+                  <li><a href="./redemption.html">Go Rewards</a></li>
+                  <li><a href="./newsroom_faq.html">Newsroom & FAQ</a></li>
+                  
+              </ul>
+          </div>
+          <div class="col-sm-4 p-5">
+                  <h5>Company Info</h5>
+                  <ul class="footer">
+                      
+                      <li>Go Sport is a sport equipment company, and we also committed to promoting the importance of exercise and health to the public. Through our Go Rewards program, we hope that the public can arouse your interest in participating in various sports activities while receiving daily health information. Let's be healthier and stronger together!</li>
+                      
+                  </ul>
+          </div>
+      </div>
+    </footer>
+    <!--End of Footer-->
+    <script>
+      //Navigation bar for mobile device
+      if (window.innerWidth<=576){        
+          let ul = document.getElementsByTagName("ul");
+          let li = document.createElement("li");
+          let a = document.createElement("a");
+          let div = document.getElementsByTagName("div");
+          
+          div[4].style.cssText="height: 96px;";
+          li.className="nav-item";
+          a.className="nav-link text-black";
+          a.textContent="Login";
+          a.setAttribute("href", "./login.html");
+          a.style.margin="10px";
+          ul[0].append(li);
+          li.appendChild(a);
+          div[3].removeChild(div[3].lastElementChild);
+          div[2].removeChild(div[2].lastElementChild);
+      }
+    </script>
+    <script src="js/bootstrap.bundle.min.js" ></script>
+
+
+
+
+
+
+
+  </body>
+</html>

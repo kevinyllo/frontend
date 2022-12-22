@@ -13,12 +13,11 @@
     <title>Go Sport</title>
     <style>
        .card-img-top img{
-            height: 170px;
             display: block;
             margin: auto;
         }
         .row{
-            margin: 0px;
+            margin: 20px 20px 0px 20px;
         }
         .footer{
             list-style-type: none;
@@ -75,7 +74,7 @@
         <div>
             <div class="text-center">
             <a class="navbar-brand" href="./index.html">
-                <img src="img/logo-lg.svg" alt="logo" style="width: 80px;">
+                <img src="img/logo.svg" alt="logo" style="width: 80px;">
             </a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" style="position: fixed; right: 5vw; top: 28px;">
@@ -84,14 +83,14 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item" style="margin: 10px;">
-                        <a class="nav-link text-black" href="./index.html">Home</a>
-                    </li>
-                    <li class="nav-item" style="margin: 10px;">
-                        <a class="nav-link text-black" href="./Article_list.html">Go Healthy</a>
-                    </li>
-                    <li class="nav-item" style="margin: 10px;">
-                        <a class="nav-link text-black" href="./product_list.html">Go Rewards</a>
-                    </li>
+                        <a class="nav-link text-black" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item" style="margin: 10px;">
+                        <a class="nav-link text-black" href="go_healthy.html">Go Healthy</a>
+                      </li>
+                      <li class="nav-item" style="margin: 10px;">
+                        <a class="nav-link text-black" href="product_list.html">Go Rewards</a>
+                      </li>
                     
                 </ul>
                 <div style="position: fixed; right: 30px;">
@@ -108,20 +107,20 @@
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
       <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      <!-- <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
       <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button> -->
     </div>
     
     <!-- The slideshow/carousel -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/banner1.jpg" alt="" class="d-block" style="width: 100vw;">
+        <img src="img/banner1.jpg" alt="" class="d-block" style="width: 80vw; margin: auto;" data-interval="2500">
       </div>
       <div class="carousel-item">
-        <img src="img/banner2.jpg" alt="" class="d-block" style="width: 100vw;">
+        <img src="img/banner2.jpg" alt="" class="d-block" style="width: 80vw; margin: auto;" data-interval="2500">
       </div>
-      <div class="carousel-item">
+      <!-- <div class="carousel-item">
         <img src="img/banner3.jpg" alt="" class="d-block" style="width: 100vw;">
       </div>
       <div class="carousel-item">
@@ -129,7 +128,7 @@
       </div>
       <div class="carousel-item">
         <img src="img/banner5.jpg" alt="" class="d-block" style="width: 100vw;">
-      </div>
+      </div> -->
     </div>
     
     <!-- Left and right controls/icons -->
@@ -144,45 +143,44 @@
     <div class="row">
         <div class="col-sm-9">
             <div class="text-center p-5">
-                <h3>Articles</h3>
+                <h3>Go Healthy</h3>
                 
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias velit maxime nam iste! Sit ut quam dolorum? Aperiam libero quos minus nisi id voluptatibus. Sit rerum ducimus recusandae enim quis?</p>
+                <p>Let's read the latest sport and welleness related articles, in order to keep you more healthy!</p>
+                <!-- <a href="go_healthy.html" style="color: black;">Read more</a> -->
             </div>
-            <div class="grid-container">
+            <div class="grid-container" style="margin-bottom: 5vh;">
                 <div class="item1" style="margin: auto;">
                     <div class="card" style="width: 30vw;">
-                        <img class="card-img-top" src="img/g2.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="img/article_cover_1.jpeg" alt="Card image" style="width:100%">
                         <div class="card-body">
-                        <h4 class="card-title">Article headline</h4>
-                        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                        <h4 class="card-title">9 major precautions for running!</h4>
+                        <p class="card-text">Many people ignore the correct posture and precautions before and after running. Here some ......</p>
                         <div class="text-center">
-                            <a href="./Article_list.html" class="btn btn-secondary">View more</a>
+                            <a href="go_healthy-aticle_1_EN.html" class="btn btn-secondary">Read more</a>
                         </div>
                         </div>
                     </div>
                 </div>
                 <div class="item2" style="margin: auto;">
                     <div class="card" style="width: 30vw;">
-                        <img class="card-img-top" src="img/g10.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="img/article_cover_2.jpeg" alt="Card image" style="width:100%">
                         <div class="card-body">
-                        <h4 class="card-title">Article headline</h4>
-                        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                        <h4 class="card-title">17 Must-learn health habits!</h4>
+                        <p class="card-text">The following 17 suggestions about eating habits from doctors, nutritionists, and nurses, let's ......</p>
                         <div class="text-center">
-                            <a href="./Article_list.html" class="btn btn-secondary">View more</a>
+                            <a href="#" class="btn btn-secondary">Read more</a>
                         </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center p-5">
-                <a href="./Article_list.html" style="color: black;">Read more</a>
-            </div>
+            
         
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3" style="background: lightgrey;">
             <div class="text-center p-5">
                 <h3>BMI Indicator</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam totam laudantium dignissimos ipsam, repellat eius recusandae, sapiente quidem asperiores in nemo, a modi culpa blanditiis odit quos quae? Harum, laudantium!</p>
+                <p>Try and check the result! See if you are healthy enough!</p>
                 <input type="text" id="height" name="height" placeholder="height(cm)" style="width: 100%;"><br><br>
                 <input type="text" id="weight" name="weight" placeholder="weight(kg)" style="width: 100%;"><br><br>
                 <button type="button" onclick="calcBMI()" class="btn btn-dark">Result</button><br>
@@ -190,12 +188,12 @@
             </div>
             
         </div>
-      </div>
-      <div class="row">
+    </div>
+    <div class="row" style="background: lightyellow; margin-top: 5vh;">
         <div class="col-sm-6 p-5">
-            <h3>Rewards</h3><br>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam impedit id, perspiciatis quisquam, saepe ipsam eius numquam ab sit exercitationem iure, voluptatem unde vel veritatis esse tempore libero eos sapiente!</p>
-            <a href="./product_list.html" class="btn btn-secondary">View more</a>
+            <h3>Go Rewards</h3><br>
+            <p>We have varies type of exciting rewards waiting for you, let's join Go Rewards programme!</p>
+            <a href="product_list.html" class="btn btn-secondary" style="background:#55a5d4; border: none; ">View more</a>
         </div>
         <div class="col-sm-6 p-5">
             <div id="multi-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -204,11 +202,11 @@
 						<div class="col-md-3">
 							<div class="card">
 								<div class="card-img-top">
-									<img src="/img/g3.jpg" class="img-fluid">
+									<img src="img/gift3.png" class="img-fluid">
 								</div>
                                 <div class="card-body text-center">
-                                    <h6 class="card-title">Gift A</h6>
-                                    <p class="card-text">50 points</p>
+                                    <h6 class="card-title">Sport socks (1pair)</h6>
+                                    <p class="card-text">100 points</p>
                                 </div>
 
 								
@@ -219,10 +217,10 @@
 						<div class="col-md-3">
 							<div class="card">
 								<div class="card-img-top">
-									<img src="/img/g4.jpg" class="img-fluid">
+									<img src="img/gift2.png" class="img-fluid">
 								</div>
                                 <div class="card-body text-center">
-                                    <h6 class="card-title">Gift B</h6>
+                                    <h6 class="card-title">Jump rope (1pc)</h6>
                                     <p class="card-text">100 points</p>
                                 </div>
 								
@@ -233,36 +231,10 @@
 						<div class="col-md-3">
 							<div class="card">
 								<div class="card-img-top">
-									<img src="img/g5.jpg" class="img-fluid">
+									<img src="img/gift5.png" class="img-fluid">
 								</div>
 								<div class="card-body text-center">
-                                    <h6 class="card-title">Gift C</h6>
-                                    <p class="card-text">100 points</p>
-                                </div>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item multi-item">
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img-top">
-									<img src="/img/g6.jpg" class="img-fluid">
-								</div>
-								<div class="card-body text-center">
-                                    <h6 class="card-title">Gift D</h6>
-                                    <p class="card-text">250 points</p>
-                                </div>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item multi-item">
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img-top">
-									<img src="/img/g7.jpg" class="img-fluid">
-								</div>
-								<div class="card-body text-center">
-                                    <h6 class="card-title">Gift E</h6>
+                                    <h6 class="card-title">Watter bottle (1pc)</h6>
                                     <p class="card-text">200 points</p>
                                 </div>
 							</div>
@@ -272,11 +244,37 @@
 						<div class="col-md-3">
 							<div class="card">
 								<div class="card-img-top">
-									<img src="/img/g8.jpg" class="img-fluid">
+									<img src="img/gift6.png" class="img-fluid">
 								</div>
 								<div class="card-body text-center">
-                                    <h6 class="card-title">Gift F</h6>
+                                    <h6 class="card-title">50% discount code</h6>
                                     <p class="card-text">300 points</p>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item multi-item">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img-top">
+									<img src="img/gift4.png" class="img-fluid">
+								</div>
+								<div class="card-body text-center">
+                                    <h6 class="card-title">30% discount code</h6>
+                                    <p class="card-text">250 points</p>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item multi-item">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img-top">
+									<img src="img/gift1.png" class="img-fluid">
+								</div>
+								<div class="card-body text-center">
+                                    <h6 class="card-title">10% discount code</h6>
+                                    <p class="card-text">100 points</p>
                                 </div>
 							</div>
 						</div>
@@ -297,8 +295,8 @@
                     <h5>Contact Us</h5>
                     <ul class="footer" >
                         
-                        <li >Email: xxx@xxxx.com</li>
-                        <li>Tel: xxxx xxxx</li>
+                        <li>Email: enquiry@GoSport.com</li>
+                <li>Tel: 2345 6789</li>
                     </ul>
                     <div class="footer">
                         <span style="padding-right: 10px;"><a href="">繁</a></span><span><a href="">簡</a></span>
@@ -320,20 +318,21 @@
                     </div>
                 </div>
                 <div class="col-sm-4 p-5">
-                    <h5>SiteMap</h5>
+                    <h5>Site Map</h5>
                     <ul class="footer">
                         
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/Article_list.html">Go Healthy</a></li>
-                        <li><a href="/product_list.html">Go Rewards</a></li>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="go_healthy.html">Go Healthy</a></li>
+                      <li><a href="product_list.html">Go Rewards</a></li>
+                      <li><a href="newsroom_faq.html">Newsroom & FAQ</a></li>
                         
                     </ul>
                 </div>
                 <div class="col-sm-4 p-5">
-                        <h5>Company info</h5>
+                        <h5>Company Info</h5>
                         <ul class="footer">
                             
-                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatum nisi minima cumque doloremque alias, laboriosam qui maiores dolorum repellat cum cupiditate dolor deserunt est laudantium! In culpa esse omnis!</li>
+                            <li>Go Sport is a sport equipment company, and we also committed to promoting the importance of exercise and health to the public. Through our Go Rewards program, we hope that the public can arouse your interest in participating in various sports activities while receiving daily health information. Let's be healthier and stronger together!</li>
                             
                         </ul>
                 </div>

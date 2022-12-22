@@ -1,126 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/brands.min.css">
-
-    <title>Login | Go Sport</title>
-
- </head>
-
-<!-- login style -->
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background: #ecf0f3;
-}
-
-.wrapper {
-    max-width: 350px;
-    min-height: 500px;
-    margin: 80px auto;
-    padding: 40px 30px 30px 30px;
-    background-color: #ecf0f3;
-    border-radius: 15px;
-    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
-}
-
-.logo {
-    width: 80px;
-    margin: auto;
-}
-
-.logo img {
-    width: 100%;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0px 0px 3px #5f5f5f,
-        0px 0px 0px 5px #ecf0f3,
-        8px 8px 15px #a7aaa7,
-        -8px -8px 15px #fff;
-}
-
-.wrapper .name {
-    font-weight: 600;
-    font-size: 1.4rem;
-    letter-spacing: 1.3px;
-    padding-left: 10px;
-    color: #555;
-}
-
-.wrapper .form-field input {
-    width: 100%;
-    display: block;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 1.2rem;
-    color: #666;
-    padding: 10px 15px 10px 10px;
-    /* border: 1px solid red; */
-}
-
-.wrapper .form-field {
-    padding-left: 10px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
-}
-
-.wrapper .form-field .fas {
-    color: #555;
-}
-
-.wrapper .btn {
-    box-shadow: none;
-    width: 100%;
-    height: 40px;
-    background-color: #03A9F4;
-    color: #fff;
-    border-radius: 25px;
-    box-shadow: 3px 3px 3px #b1b1b1,
-        -3px -3px 3px #fff;
-    letter-spacing: 1.3px;
-}
-
-.wrapper .btn:hover {
-    background-color: #039BE5;
-}
-
-.wrapper a {
-    text-decoration: none;
-    font-size: 0.8rem;
-    color: #03A9F4;
-}
-
-.wrapper a:hover {
-    color: #039BE5;
-}
-
-@media(max-width: 380px) {
-    .wrapper {
-        margin: 30px 20px;
-        padding: 40px 15px 15px 15px;
-    }
-}
-</style>
-<!-- login style -->
-
-
-<!-- footer style -->
-<style>
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <title>Membership | Go Sport</title>
+    <style>
+        .card-img-top img{
+            height: 170px;
+            display: block;
+            margin: auto;
+        }
+        .card{
+            border-width: 0px;
+        }
+        .card-group{
+            margin-bottom: 30px;
+        }
+        .row{
+            margin: 0px;
+        }
         .footer{
             list-style-type: none;
             padding: 0px;
@@ -129,23 +31,44 @@ body {
         .footer a{
             color: white;
         }
-</style>
-<!-- footer style -->
-
-  <body>
+        .quantity{
+            margin-left: 60px
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: 250px 250px 250px 250px;
+            grid-column-gap: 20px;
+            height: 600px;
+            
+        }    
+        @media (max-width: 576px){
+            .grid-container{
+                grid-template-columns: 178px 178px;
+                grid-column-gap: 10px;
+                overflow: auto;
+            }
+            
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
 
 <!-- navbar -->
-    <nav class="navbar navbar-expand-sm bg-light fixed-top justify-content-center">
-        <!-- Links -->
+    <nav class="navbar navbar-expand-sm bg-light fixed-top justify-content-center"> 
         <div>
             <div class="text-center">
             <a class="navbar-brand" href="./index.html">
-                <img src="./img/logo.svg" alt="logo" style="width: 80px;">
+                <img src="img/logo.svg" alt="logo" style="width: 80px;">
             </a>
             </div>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" style="position: fixed; right: 5vw; top: 28px;">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item" style="margin: 10px;">
@@ -153,59 +76,91 @@ body {
                     </li>
                     <li class="nav-item" style="margin: 10px;">
                         <a class="nav-link text-black" href="./go_healthy.html">Go Healthy</a>
-                    <li class="nav-item" style="margin: 10px;">
-                        <a class="nav-link text-black" href="./product_list.html">Go Rewards</a>
                     </li>
+                    <li class="nav-item" style="margin: 10px;">
+                        <a class="nav-link text-black" href="./redemption.html">Go Rewards</a>
+                    </li>
+                    
                 </ul>
             </div>
+
         </div>
     </nav>
 <!-- navbar -->
 
     <div style="height: 156px;"></div>
     <div class="row">
+<div class="container" id="welcomeMessage" style="margin-top: 5vh; margin-bottom: 5vh;">
+<h4 style="text-align: center;">Welcome to Go Sport!</h4>
+<h5 style="text-align: center;">What would you like to do now?</h5>
+</div>
 
-<!-- login mechanism -->
 
-      <div class="container-fluid" id="loginSection">
-        <div class="wrapper">
-          <div class="logo">
-              <img src="img/logo.svg" alt="Go Sport">
-          </div>
-          <div class="text-center mt-4 name">Go Sport</div>
+<!-- card -->
 
-          <form class="p-3 mt-3" method="pull">
-              <div class="form-field d-flex align-items-center">
-                  <span class="far fa-user"></span>
-                  <input type="email" class="form-control" name="userName" id="userName" placeholder="Email address" required autofocus>
-              </div>
-              <div class="form-field d-flex align-items-center">
-                  <span class="fas fa-key"></span>
-                  <input type="password" class="form-control" name="password" id="pwd" placeholder="Password" required>
-                </div>
-          </form>
+<div class="card mx-auto" style="width: 18rem;">
+  <!-- <a href="./index.html">
+  <img src="./img/logo.svg" class="card-img-top" alt="Go Sport logo"></a> -->
+  <div class="card-body">
+    <h5 class="card-title">Your Rewards Summary</h5>
+    <p class="card-text">Here is the quick look of your Rewards.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Your last login: <b>26 hours</b> ago</li>
+    <li class="list-group-item">You have logged in: <b>25 days</b></li>
+    <li class="list-group-item">Your Rewards: <b>212</b> Points</li>
+  </ul>
+  <div class="card-body">
+  </div>
+</div>
 
-          <form action="landing.html">
-            <input type="submit" class="btn btn-primary" value="Press to login" />
-          </form>
+<div class="card mx-auto" style="width: 18rem;">
+  <a href="./newsroom_faq.html">
+  <img src="img/gift7.png" class="card-img-top" alt="Latest News"></a>
+  <div class="card-body">
+    <h5 class="card-title">Our Latest News</h5>
+    <p class="card-text">News on various topics selected just for you.</p>
+  </div>
+    
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item">Go Rewards is launching now!...</li>
+    <li class="list-group-item">Go Sport's rewarding prog...</li>
+  </ul>
+  <div class="card-body">
+    <a href="./newsroom_faq.html#news">Newsroom</a><br>
+    <a href="./newsroom_faq.html#faq" class="card-link">FAQs</a>
+  </div>
+</div>
 
-          <div class="text-center fs-6">
-              <a href="#">Forget password?</a> or <a href="#">Sign up</a>
-          </div>
+<div class="card mx-auto" style="width: 18rem;">
+  <a href="./redemption.html">
+  <img src="img/gift6.png" class="card-img-top" alt="Rewards Redemption"></a>
+  <div class="card-body">
+    <h5 class="card-title">Rewards Redemption</h5>
+    <p class="card-text">Exciting awards you ever wanted. Come to have a look.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Sport Equipment</li>
+    <li class="list-group-item">Promotional Discount Coupon</li>
+    <li class="list-group-item">Upcoming Exclusive Items</li>
+  </ul>
+  <div class="card-body">
+    <a href="./redemption.html" class="card-link">Rewards Redemption</a>
+  </div>
+</div>
 
-        </div>    
-      </div>    
+<!-- card -->
 
-<!-- login mechanism -->
 
-<!-- footer -->
+
+<!--  footer -->
     <footer class="bg-success text-white">
         <div class="row">
             <div class="col-sm-4 p-5">
                 <h5>Contact Us</h5>
                 <ul class="footer" >
-
-                    <li>Email: enquiry@GoSport.com</li>
+                    
+                    <li >Email: enquiry@GoSport.com</li>
                     <li>Tel: 2345 6789</li>
                 </ul>
                 <div class="footer">
@@ -230,39 +185,38 @@ body {
             <div class="col-sm-4 p-5">
                 <h5>Site Map</h5>
                 <ul class="footer">
-
+                    
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./go_healthy.html">Go Healthy</a></li>
-                    <li><a href="./product_list.html">Go Rewards</a></li>
+                    <li><a href="./redemption.html">Go Rewards</a></li>
                     <li><a href="./newsroom_faq.html">Newsroom & FAQs</a></li>
-
+                    
                 </ul>
             </div>
             <div class="col-sm-4 p-5">
                     <h5>Company Info</h5>
                     <ul class="footer">
-
+                        
                         <li>Go Sport is a sport equipment company, and we also committed to promoting the importance of exercise and health to the public. Through our Go Rewards program, we hope that the public can arouse your interest in participating in various sports activities while receiving daily health information. Let's be healthier and stronger together!</li>
-
+                        
                     </ul>
             </div>
         </div>
     </footer>
-<!-- footer -->
 
     <script>
         //Navigation bar for mobile device
-        if (window.innerWidth<=576){
+        if (window.innerWidth<=576){        
             let ul = document.getElementsByTagName("ul");
             let li = document.createElement("li");
             let a = document.createElement("a");
             let div = document.getElementsByTagName("div");
-
+            
             div[4].style.cssText="height: 96px;";
             li.className="nav-item";
             a.className="nav-link text-black";
             a.textContent="Login";
-            a.setAttribute("href", "./login.html");
+            a.setAttribute("href", "#");
             a.style.margin="10px";
             ul[0].append(li);
             li.appendChild(a);
@@ -270,7 +224,7 @@ body {
             div[2].removeChild(div[2].lastElementChild);
         }
     </script>
- 
-<script src="js/bootstrap.bundle.min.js"  ></script>
+    <script src="js/bootstrap.bundle.min.js" ></script>
+
 </body>
 </html>
